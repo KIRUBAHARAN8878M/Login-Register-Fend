@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/sb-admin-2.css';
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Login from './components/loginfolder/Login';
+import Portal from './components/Portal';
+import Dashboard from './components/Dashboard';
+import Register from './components/loginfolder/Register';
+import Users from './components/Users';
+import Passwordreset from './components/loginfolder/Passwordreset';
+import ResetPasswordPage from './components/loginfolder/ResetPasswordPage';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path='/resetpassword' element={<Passwordreset/>}/>
+          <Route path='/reset-password-page' element={< ResetPasswordPage/>}/>
+          <Route path="/register" element={<Register />} />
+          <Route path="/portal" element={<Portal />} >
+
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="users" element={<Users />} />
+
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
+
 }
 
 export default App;

@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+body{
+  background-image: url("https://cdn.pixabay.com/photo/2015/05/26/23/52/technology-785742_960_720.jpg")  !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.transp{
+  backdrop-filter: blur(3px) !important;
+  background: rgba(225,225,225,0.1) !important;
+  color: white !important;
+  /* filter: drop-shadow(8px 8px 4px rgb(#ff0000)) !important; */
+box-shadow: 8px 8px 8px rgb(#f7b0b0) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+.input-error{
+    border: 1px solid red;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .myname {
+    background: linear-gradient(90deg, #56ccf2, #2f80ed);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hue 2s linear infinite;
   }
-  to {
-    transform: rotate(360deg);
+  @keyframes hue {
+    0% {
+      -webkit-filter: hue-rotate(0deg);
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      -webkit-filter: hue-rotate(1turn);
+      filter: hue-rotate(1turn);
+    }
   }
-}
